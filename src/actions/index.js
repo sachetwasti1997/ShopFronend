@@ -53,3 +53,17 @@ export const deleteAdminData = (id) => async(dispatch) => {
     })
 }
 
+export const deleteCartItem = (id) => async() => {
+    const obj = {
+        idDel: id
+    }
+    await apicommunicate.post('/delete-cart', obj)
+    .then((response) => {
+        console.log("Done");
+        fetchData()
+    })
+    .catch(err => {
+        console.log(err);
+    })
+}
+

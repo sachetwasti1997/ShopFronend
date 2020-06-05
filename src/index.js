@@ -22,3 +22,13 @@ ReactDOM.render(
     </Provider>,
     document.querySelector('#root')
 );
+
+
+
+// I by mistake told about you to my parents, that I like this girl
+
+// And now they dont allow me to talk, or type message
+
+
+
+

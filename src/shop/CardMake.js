@@ -24,14 +24,17 @@ class CardMk extends Component {
         })
     }
 
-    addToCartClick = () => {
+    addToCartClick = (event) => {
+        // event.preventDefault();
         const cartDataSend = {
             id:this.props.item.itemsArray.id, 
             price: +this.props.item.itemsArray.price
         }
-        console.log(this.props);
-        console.log("Sending"+cartDataSend);
+        // console.log(this.props);
+        console.log(cartDataSend);
+        console.log("Data to add to cart")
         this.props.cartData(cartDataSend);
+        return;
     }
 
     onDeleteClick = () => {
@@ -88,7 +91,7 @@ class CardMk extends Component {
                 <Card.Body>
                     <Card.Title>{itemName}</Card.Title>
                     <Card.Text>
-                        <strong>Price : {this.props.item.itemsArray.price}</strong><br/>
+                        <strong>Price : Rs. {this.props.item.itemsArray.price}</strong><br/>
                         <strong>Quantity : {this.props.item.itemsArray.quantity}</strong><br/>
                         <span onClick={this.handleHover}>{description}</span><br/>
                         {buttonComponent}
